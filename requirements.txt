@@ -1,0 +1,7 @@
+requests
+facebook-sdk
+moviepy
+Pillow
+schedule
+numpy
+beautifulsoup4
