@@ -81,6 +81,12 @@ This will post Quran Recitation → Hadith → QA → Ayah → (repeat every hou
 **Console Output**  
 ![Terminal](screenshots/bot_terminal_output.png)
 
+**Quran Image Demo**  
+![Image](screenshots/quran_image_demo.jpg)
+
+**Hadith Image Demo**  
+![Image](screenshots/hadith_image_demo.jpg)
+
 🔐 Meta App Compliance
 ✅ Privacy Policy: View
 
