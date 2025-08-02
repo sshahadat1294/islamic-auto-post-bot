@@ -70,6 +70,17 @@ Run the bot:
 python recitation_bot.py
 This will post Quran Recitation → Hadith → QA → Ayah → (repeat every hour)
 
+### 📸 Screenshots
+
+**Facebook Post Example**  
+![FB Post](screenshots/quran_post_fb.png)
+
+**Telegram Bot Preview**  
+![Telegram](screenshots/telegram_preview.png)
+
+**Console Output**  
+![Terminal](screenshots/bot_terminal_output.png)
+
 🔐 Meta App Compliance
 ✅ Privacy Policy: View
 
