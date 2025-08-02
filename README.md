@@ -73,7 +73,7 @@ This will post Quran Recitation → Hadith → QA → Ayah → (repeat every hou
 ### 📸 Screenshots
 
 **Facebook Post Example**  
-![FB Post](screenshots/quran_post_fb.png)
+![FB Post](screenshots/hadith_post_fb.png)
 
 **Telegram Bot Preview**  
 ![Telegram](screenshots/telegram_preview.png)
