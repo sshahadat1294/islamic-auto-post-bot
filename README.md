@@ -82,7 +82,7 @@ This will post Quran Recitation → Hadith → QA → Ayah → (repeat every hou
 ![Terminal](screenshots/bot_terminal_output.png)
 
 **Quran Image Demo**  
-![Image](screenshots/quran_image_demo.jpg)
+![Image](screenshots/quran_image demo.jpg)
 
 **Hadith Image Demo**  
 ![Image](screenshots/hadith_image_demo.jpg)
