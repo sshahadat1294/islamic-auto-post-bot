@@ -19,8 +19,8 @@ hadith_backgrounds = ["h1.png", "h2.png", "h3.png", "h5.png", "h6.png"]
 FONT_AYAH = "SutonnyMJ.ttf"
 FONT_FOOTER = "Tinos-Bold.ttf"
 FONT_ARABIC = "Amiri-Regular.ttf"
-HADITH_FILE = r"C:\Users\Admin\OneDrive\Documents\fb automation\quranvbot\hadiths_bn_fixed.json"
-POSTED_TRACKER_FILE = "hadith_posted_tracker.json"
+HADITH_FILE = "data/hadiths_bn_fixed.json"
+POSTED_TRACKER_FILE = "data/hadith_posted_tracker.json"
 
 # === Telegram Config ===
 telegram_token = os.getenv("TELEGRAM_BOT_TOKEN")  # Replace with your actual bot token
@@ -658,5 +658,6 @@ while True:
 
     index += 1
     time.sleep(3600)
+
 
 
