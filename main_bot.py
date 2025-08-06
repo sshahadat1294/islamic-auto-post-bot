@@ -572,7 +572,7 @@ def post_qa(index):
         print("❌ Image not found:", img_path)
         return
 
-img = Image.open(img_path)
+    img = Image.open(img_path)
 
     caption = f"""
 ✅ জিজ্ঞাসা ও জবাব:
@@ -588,6 +588,7 @@ img = Image.open(img_path)
 
 #দীন #হিদায়াহ #জিজ্ঞাসা #জবাব #ইসলামি_প্রশ্ন #hidayah
 """.strip()
+
 # === Upload image with published=false and capture media_id ===
     try:
         with open(img_path, "rb") as f:
@@ -670,6 +671,7 @@ while True:
 
     index += 1
     time.sleep(3600)
+
 
 
 
