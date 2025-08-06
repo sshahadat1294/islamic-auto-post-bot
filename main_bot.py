@@ -11,16 +11,22 @@ import json
 PAGE_ID = os.getenv("FB_PAGE_ID")
 ACCESS_TOKEN = os.getenv("FB_ACCESS_TOKEN")
 
+import os
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
 # Background images
-quran_backgrounds = ["Q1.png", "Q2.png", "Q3.png", "Q4.png", "Q5.png", "Q7.png"]
-hadith_backgrounds = ["h1.png", "h2.png", "h3.png", "h5.png", "h6.png"]
+QURAN_BG_DIR = os.path.join(BASE_DIR, "Assets", "quranbg")
+HADITH_BG_DIR = os.path.join(BASE_DIR, "Assets", "hadithbg")
+QA_BG_DIR = os.path.join(BASE_DIR, "Assets", "qabg")
 
 # fonts
-FONT_AYAH = "SutonnyMJ.ttf"
-FONT_FOOTER = "Tinos-Bold.ttf"
-FONT_ARABIC = "Amiri-Regular.ttf"
-HADITH_FILE = "data/hadiths_bn_fixed.json"
-POSTED_TRACKER_FILE = "data/hadith_posted_tracker.json"
+HADITH_FILE = os.path.join(BASE_DIR, "data", "hadiths_bn_fixed.json")
+POSTED_TRACKER_FILE = os.path.join(BASE_DIR, "data", "hadith_posted_tracker.json")
+
+FONT_AYAH = os.path.join(BASE_DIR, "fonts", "Tinos-Bold.ttf")
+FONT_FOOTER = os.path.join(BASE_DIR, "fonts", "Tinos-Bold.ttf")
+FONT_ARABIC = os.path.join(BASE_DIR, "fonts", "Tinos-Bold.ttf")
+
 
 # === Telegram Config ===
 telegram_token = os.getenv("TELEGRAM_BOT_TOKEN")  # Replace with your actual bot token
@@ -285,8 +291,9 @@ def get_random_hadith():
 
 def create_quran_image(ayah_text, surah_name_en, ayah_number):
     try:
-        img_path = random.choice(quran_backgrounds)
-        img = Image.open(img_path).convert("RGB")
+        bg_file = random.choice(os.listdir(QURAN_BG_DIR))
+        img_path = os.path.join(QURAN_BG_DIR, bg_file)
+        img = Image.open(img_path)
         draw = ImageDraw.Draw(img)
 
         font_footer = ImageFont.truetype(FONT_FOOTER, size=250)
@@ -307,8 +314,9 @@ def create_quran_image(ayah_text, surah_name_en, ayah_number):
 
 def create_hadith_image(book, number, book_en):
     try:
-        img_path = random.choice(hadith_backgrounds)
-        img = Image.open(img_path).convert("RGB")
+        bg_file = random.choice(os.listdir(HADITH_BG_DIR))
+        img_path = os.path.join(HADITH_BG_DIR, bg_file)
+        img = Image.open(img_path)
         draw = ImageDraw.Draw(img)
 
         font_footer = ImageFont.truetype(FONT_FOOTER, size=200)
@@ -557,7 +565,9 @@ def post_qa(index):
         print("❌ Could not fetch QA.")
         return
 
-    img_path = random.choice(qa_backgrounds)
+    bg_file = random.choice(os.listdir(QA_BG_DIR))
+    img_path = os.path.join(QA_BG_DIR, bg_file)
+    img = Image.open(img_path)
     if not os.path.exists(img_path):
         print("❌ Image not found.")
         return
@@ -658,6 +668,7 @@ while True:
 
     index += 1
     time.sleep(3600)
+
 
 
 
