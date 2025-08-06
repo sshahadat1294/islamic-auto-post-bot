@@ -522,8 +522,8 @@ def post_hadith(index):
 # Similar random-selection logic used for Q&A like hadith
 
 
-QA_FILE = "ifatwa_data_cleaned.json"
-USED_QA_FILE = "used_qa.json"
+QA_FILE = os.path.join(BASE_DIR, "data", "ifatwa_data_cleaned.json")
+USED_QA_FILE = os.path.join(BASE_DIR, "data", "used_qa.json")
 qa_backgrounds = ["qa1.png", "qa2.png", "qa3.png", "qa4.png"]  # update paths as needed
 
 # Load QAs
@@ -567,10 +567,12 @@ def post_qa(index):
 
     bg_file = random.choice(os.listdir(QA_BG_DIR))
     img_path = os.path.join(QA_BG_DIR, bg_file)
-    img = Image.open(img_path)
+
     if not os.path.exists(img_path):
-        print("❌ Image not found.")
+        print("❌ Image not found:", img_path)
         return
+
+img = Image.open(img_path)
 
     caption = f"""
 ✅ জিজ্ঞাসা ও জবাব:
@@ -668,6 +670,7 @@ while True:
 
     index += 1
     time.sleep(3600)
+
 
 
 
