@@ -1,1 +1,1 @@
-worker: python recitation_bot.py
+worker: python main_bot.py
