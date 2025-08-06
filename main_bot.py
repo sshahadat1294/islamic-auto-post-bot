@@ -638,3 +638,25 @@ def post_qa(index):
     except Exception as e:
         print(f"❌ Facebook post/comment error:", e)
 
+index = 1
+
+while True:
+    print(f"\n🔁 Posting Index: {index}")
+    try:
+        if index % 3 == 1:
+            print("❓ Posting QA")
+            post_qa(index)
+        elif index % 3 == 2:
+            print("📜 Posting Hadith")
+            post_hadith(index)
+        else:
+            print("🕋 Posting Quran Ayah")
+            post_quran_ayah(index)
+
+    except Exception as e:
+        print("Global Post Error:", e)
+
+    index += 1
+    time.sleep(3600)
+
+
