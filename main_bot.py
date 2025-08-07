@@ -15,17 +15,17 @@ import os
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # Background images
-QURAN_BG_DIR = os.path.join(BASE_DIR, "Assets", "quranbg")
-HADITH_BG_DIR = os.path.join(BASE_DIR, "Assets", "hadithbg")
-QA_BG_DIR = os.path.join(BASE_DIR, "Assets", "qabg")
+QURAN_BG_DIR = os.path.join(BASE_DIR, "assets", "quranbg")
+HADITH_BG_DIR = os.path.join(BASE_DIR, "assets", "hadithbg")
+QA_BG_DIR = os.path.join(BASE_DIR, "assets", "qabg")
 
 # fonts
 HADITH_FILE = os.path.join(BASE_DIR, "data", "hadiths_bn_fixed.json")
 POSTED_TRACKER_FILE = os.path.join(BASE_DIR, "data", "hadith_posted_tracker.json")
 
-FONT_AYAH = os.path.join(BASE_DIR, "fonts", "Tinos-Bold.ttf")
-FONT_FOOTER = os.path.join(BASE_DIR, "fonts", "Tinos-Bold.ttf")
-FONT_ARABIC = os.path.join(BASE_DIR, "fonts", "Tinos-Bold.ttf")
+FONT_AYAH = os.path.join(BASE_DIR, "assets", "fonts", "Tinos-Bold.ttf")
+FONT_FOOTER = os.path.join(BASE_DIR, "assets", "fonts", "Tinos-Bold.ttf")
+FONT_ARABIC = os.path.join(BASE_DIR, "assets", "fonts", "Tinos-Bold.ttf")
 
 
 # === Telegram Config ===
@@ -524,7 +524,6 @@ def post_hadith(index):
 
 QA_FILE = os.path.join(BASE_DIR, "data", "ifatwa_data_cleaned.json")
 USED_QA_FILE = os.path.join(BASE_DIR, "data", "used_qa.json")
-qa_backgrounds = ["qa1.png", "qa2.png", "qa3.png", "qa4.png"]  # update paths as needed
 
 # Load QAs
 with open(QA_FILE, "r", encoding="utf-8") as f:
@@ -671,6 +670,7 @@ while True:
 
     index += 1
     time.sleep(3600)
+
 
 
 
